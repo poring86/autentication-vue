@@ -104,7 +104,11 @@
           terms: this.terms
         }
         console.log(formData)
-        axios.post('https://vue-autentication.firebaseio.com/users.json', formData)
+        axios.post('/signupNewUser.json?key=AIzaSyAoMj7f0KW_3SyLvvmohqRbGDAFGSbeKPo', {
+            email:formData.email,
+            password:formData.password,
+            returnSecureToken: true
+          })
           .then(res => console.log(res))
           .catch(error => console.log(error))
       }

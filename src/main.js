@@ -6,7 +6,7 @@ import store from './store'
 import axios from 'axios'
 
 axios.defaults.baseURL ='https://vue-autentication.firebaseio.com'
-axios.defaults.headers.common['Authorization'] = 'asdaegf'
+// axios.defaults.headers.common['Authorization'] = 'asdaegf'
 axios.defaults.headers.get['Accepts'] = 'application/json'
 
 const reqInterceptor = axios.interceptors.request.use(config => {
