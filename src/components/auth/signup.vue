@@ -104,7 +104,7 @@
           terms: this.terms
         }
         console.log(formData)
-        axios.post('/signupNewUser.json?key=AIzaSyAoMj7f0KW_3SyLvvmohqRbGDAFGSbeKPo', {
+        axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAoMj7f0KW_3SyLvvmohqRbGDAFGSbeKPo', {
             email:formData.email,
             password:formData.password,
             returnSecureToken: true
