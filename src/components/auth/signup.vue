@@ -69,7 +69,7 @@
 </template>
 
 <script>
-  import axios from 'axios';
+
   export default {
     data () {
       return {
@@ -104,13 +104,14 @@
           terms: this.terms
         }
         console.log(formData)
-        axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAoMj7f0KW_3SyLvvmohqRbGDAFGSbeKPo', {
-            email:formData.email,
-            password:formData.password,
-            returnSecureToken: true
-          })
-          .then(res => console.log(res))
-          .catch(error => console.log(error))
+        this.$store.dispatch('signup', formData)
+        // axios.post('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyAoMj7f0KW_3SyLvvmohqRbGDAFGSbeKPo', {
+        //     email:formData.email,
+        //     password:formData.password,
+        //     returnSecureToken: true
+        //   })
+        //   .then(res => console.log(res))
+        //   .catch(error => console.log(error))
       }
     }
   }
